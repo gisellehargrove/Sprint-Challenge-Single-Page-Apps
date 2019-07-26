@@ -10,8 +10,9 @@ export default function CharacterList() {
   const [characters, setCharacters] = useState({});
 
   const onSearch = (e, name) => {
+    let base = 'https://rickandmortyapi.com/api/character/'
     e.preventDefault();
-    handleQuery(query + '?name=' + name.name);
+    handleQuery(base + '?name=' + name.name);
   }
 
   useEffect(() => {

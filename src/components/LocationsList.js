@@ -1,17 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import LocationCard from './LocationCard';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-  card: {
-    width: 400
-  }
-})
 
 
 export default function LocationsList() {
-  const classes = useStyles();
   const [locations, setLocations] = useState({});
 
   useEffect(() => {

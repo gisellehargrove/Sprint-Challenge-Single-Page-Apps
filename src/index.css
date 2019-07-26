@@ -38,3 +38,17 @@ header h1 {
   text-align: center;
 
 }
+
+.search-container {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+
+.search-form {
+  margin: 10px auto;
+}
+
+.grid-view {
+  justify-content: space-evenly !important;
+}

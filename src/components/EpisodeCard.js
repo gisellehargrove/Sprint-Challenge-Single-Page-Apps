@@ -6,24 +6,27 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    width: 300
+    width: 400
   }
 });
 
-export default function LocationCard ({ name, type, dimension, residents }) {
-  // image={image}
+export default function EpisodeCard({ name, airDate, episode, characters}) {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography gutterBottom variant="h3" component="h2">
+        <Typography gutterBottom variant="h4" component="h4">
           {name}
         </Typography>
-        <Typography gutterBottom variant="h4" component="h4">
-          {type} : {dimension}
+        <Typography gutterBottom variant="body1" component="p">
+          {episode} : {airDate}
+        </Typography>
+        <Typography gutterBottom variant="body1" component="p">
+          Number of Characters: {characters.length}
         </Typography>
       </CardContent>
     </Card>
-  )
-}
+
+  );
+};
